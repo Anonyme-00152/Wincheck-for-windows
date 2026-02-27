@@ -5,44 +5,44 @@
 [![.NET](https://img.shields.io/badge/.NET-8.0-blue)](https://dotnet.microsoft.com/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-## 🎯 Genel Bakış
+## 🎯 Overview
 
-WinCheck, **AI destekli** Windows 7/8/10/11 işletim sistemleri için geliştirilmiş modern, yüksek performanslı bir sistem bakım ve optimizasyon aracıdır. WinUI 3 ve Windows App SDK kullanılarak geliştirilmiş olup, OpenAI, Claude ve Gemini AI entegrasyonlarıyla güçlendirilmiştir.
+WinCheck is an **AI-powered**, modern, high-performance system maintenance and optimization tool developed for Windows 7/8/10/11 operating systems. Developed using WinUI 3 and Windows App SDK, it is empowered with OpenAI, Claude, and Gemini AI integrations.
 
-### ✅ Build Durumu
+### ✅ Build Status
 
-**Backend Services:** ✅ Tamamen Çalışıyor (9/9 servis)
-- ✅ WinCheck.Core.dll - Başarıyla derlendi
-- ✅ WinCheck.Infrastructure.dll - Başarıyla derlendi
-- ✅ WinCheck.App (UI) - XAML bindings düzeltildi, production ready
+**Backend Services:** ✅ Fully Working (9/9 services)
+- ✅ WinCheck.Core.dll - Successfully compiled
+- ✅ WinCheck.Infrastructure.dll - Successfully compiled
+- ✅ WinCheck.App (UI) - XAML bindings fixed, production ready
 
-**Tüm core servisler ve UI production-ready!**
+**All core services and UI are production-ready!**
 
-**Son Güncellemeler (v1.1.0):**
-- ✅ Dark Mode desteği eklendi (Light/Dark/System)
-- ✅ Command Line Interface (CLI) eklendi
-- ✅ Gelişmiş hata yakalama ve crash dump sistemi
-- ✅ Otomatik güncelleme servisi (GitHub Releases)
-- ✅ 56 unit + integration test (%100 başarı)
-- ✅ Tüm XAML sayfaları compile-time binding (`{x:Bind}`) kullanıyor
-- ✅ Dashboard metrics multi-level fallback ile çalışıyor
-- ✅ Settings sayfası erişilebilir
-- ✅ Startup Manager crash sorunu çözüldü - Tam çalışıyor
+**Recent Updates (v1.1.0):**
+- ✅ Dark Mode support added (Light/Dark/System)
+- ✅ Command Line Interface (CLI) added
+- ✅ Advanced error handling and crash dump system
+- ✅ Automatic update service (GitHub Releases)
+- ✅ 56 unit + integration tests (100% success)
+- ✅ All XAML pages use compile-time binding (`{x:Bind}`)
+- ✅ Dashboard metrics work with multi-level fallback
+- ✅ Settings page is accessible
+- ✅ Startup Manager crash issue resolved - Fully working
 
-## Teknik Özellikler
+## Technical Specifications
 
-### Platform ve Framework
+### Platform and Framework
 - **Framework**: .NET 8.0 (LTS)
 - **UI Framework**: WinUI 3 (Windows App SDK 1.5+)
-- **Dil**: C# 12.0
-- **Minimum Gereksinim**: Windows 10 version 1809 (build 17763) veya üzeri
-- **Önerilen**: Windows 11 22H2 veya üzeri
+- **Language**: C# 12.0
+- **Minimum Requirement**: Windows 10 version 1809 (build 17763) or above
+- **Recommended**: Windows 11 22H2 or above
 
-### Mimari Tasarım
-- **Tasarım Deseni**: MVVM (Model-View-ViewModel)
+### Architectural Design
+- **Design Pattern**: MVVM (Model-View-ViewModel)
 - **Dependency Injection**: Microsoft.Extensions.DependencyInjection
-- **Asenkron İşlemler**: Task-based Asynchronous Pattern (TAP)
-- **Yapı**: Modüler, loosely-coupled architecture
+- **Asynchronous Operations**: Task-based Asynchronous Pattern (TAP)
+- **Structure**: Modular, loosely-coupled architecture
 
 ## 🚀 Implemented Services (9/9 Complete)
 
@@ -119,109 +119,109 @@ WinCheck, **AI destekli** Windows 7/8/10/11 işletim sistemleri için geliştiri
 - Signed program verification
 - Bloatware detection and recommendations
 
-## 🆕 Yeni Özellikler (v1.1.0)
+## 🆕 New Features (v1.1.0)
 
-### 🌙 Dark Mode Desteği
-- **ThemeService**: Light/Dark/System tema seçenekleri
-- Kalıcı tema ayarları (Windows.Storage)
-- Runtime'da tema değiştirme
-- Windows sistem teması ile otomatik senkronizasyon
+### 🌙 Dark Mode Support
+- **ThemeService**: Light/Dark/System theme options
+- Persistent theme settings (Windows.Storage)
+- Theme switching at runtime
+- Automatic synchronization with Windows system theme
 
 ### 💻 Command Line Interface (CLI)
 ```bash
-# Hızlı sistem taraması
+# Quick system scan
 wincheck scan --quick
 
-# Detaylı tarama
+# Detailed scan
 wincheck scan --verbose
 
-# Dosya temizliği
+# File cleanup
 wincheck clean
 
-# Sistem durumu
+# System status
 wincheck status
 
-# İşlem listesi
+# Process list
 wincheck process
 ```
 
-**Özellikler:**
-- System.CommandLine ile profesyonel CLI
-- Progress göstergeleri
-- Otomasyon ve scripting desteği
-- Renkli ve formatlı çıktı
+**Features:**
+- Professional CLI with System.CommandLine
+- Progress indicators
+- Automation and scripting support
+- Colored and formatted output
 
-### 🛡️ Gelişmiş Hata Yakalama
+### 🛡️ Advanced Error Handling
 - **ErrorHandlingService**: Global exception handling
-- Crash dump oluşturma (JSON format)
-- Son 100 hata geçmişi
-- Severity seviyeleri (Info, Warning, Error, Critical)
-- Otomatik crash dump temizleme
+- Crash dump generation (JSON format)
+- Last 100 error history
+- Severity levels (Info, Warning, Error, Critical)
+- Automatic crash dump cleanup
 - Thread-safe error collection
-- **Konum**: `%LocalAppData%\WinCheck\CrashDumps\`
+- **Location**: `%LocalAppData%\WinCheck\CrashDumps\`
 
-### 🔄 Otomatik Güncelleme
-- **AutoUpdateService**: GitHub Releases entegrasyonu
-- Semantic version karşılaştırma
-- Otomatik versiyon kontrolü
-- One-click download ve install
-- Release notes gösterimi
-- Otomatik yetki yükseltme
+### 🔄 Automatic Update
+- **AutoUpdateService**: GitHub Releases integration
+- Semantic version comparison
+- Automatic version checking
+- One-click download and install
+- Release notes display
+- Automatic privilege escalation
 
-## Temel Özellikler
+## Core Features
 
-### 1. Disk Analiz ve Temizleme Modülü
-- **Geçici Dosya Temizliği**
-  - Windows Temp klasörleri
+### 1. Disk Analysis and Cleanup Module
+- **Temporary File Cleanup**
+  - Windows Temp folders
   - Browser cache (Edge, Chrome, Firefox)
-  - .NET Temp dosyaları
+  - .NET Temp files
   - Thumbnail cache
 
-- **Sistem Dosya Analizi**
-  - Disk kullanım haritası (TreeMap görselleştirme)
-  - Büyük dosya tespiti
-  - Duplicate dosya bulma (hash-based)
+- **System File Analysis**
+  - Disk usage map (TreeMap visualization)
+  - Large file detection
+  - Duplicate file finding (hash-based)
 
-### 2. Registry Optimizasyonu
-- **Güvenli Registry Temizliği**
-  - Geçersiz uygulama referansları
-  - Eski MUI cache kayıtları
-  - Kullanılmayan file extensions
-  - Otomatik yedekleme sistemi
+### 2. Registry Optimization
+- **Safe Registry Cleanup**
+  - Invalid application references
+  - Old MUI cache records
+  - Unused file extensions
+  - Automatic backup system
 
-### 3. Başlangıç Programları Yönetimi
-- Task Scheduler analizi
-- Registry Run keys kontrolü
-- Services yönetimi
-- Performans etkisi gösterimi
+### 3. Startup Programs Management
+- Task Scheduler analysis
+- Registry Run keys check
+- Services management
+- Performance impact display
 
-### 4. Sistem Durumu Analizi
-- **SMART Disk Kontrolü**
-- **RAM Testi** (Windows Memory Diagnostic API)
-- **Sistem Dosya Bütünlüğü** (SFC/DISM entegrasyonu)
-- **Driver Güncellik Kontrolü**
+### 4. System Status Analysis
+- **SMART Disk Check**
+- **RAM Test** (Windows Memory Diagnostic API)
+- **System File Integrity** (SFC/DISM integration)
+- **Driver Update Check**
 
-### 5. Gizlilik ve Güvenlik
-- Windows telemetry ayarları
-- Gereksiz servis devre dışı bırakma
-- Kullanılmayan network protokolleri temizleme
+### 5. Privacy and Security
+- Windows telemetry settings
+- Disabling unnecessary services
+- Cleaning unused network protocols
 
-### 6. Performans İzleme
-- Real-time CPU, RAM, Disk kullanımı
-- Arka plan işlem analizi
-- Sistem kaynak geçmişi (grafikler)
+### 6. Performance Monitoring
+- Real-time CPU, RAM, Disk usage
+- Background process analysis
+- System resource history (graphs)
 
-## Teknoloji Yığını
+## Technology Stack
 
-### Core Teknolojiler
+### Core Technologies
 ```
 - .NET 8.0 SDK
 - WinUI 3 (Microsoft.WindowsAppSDK)
 - Windows Implementation Libraries (WIL)
-- C++/WinRT (kritik sistem işlemleri için)
+- C++/WinRT (for critical system operations)
 ```
 
-### NuGet Paketleri
+### NuGet Packages
 ```xml
 <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.*" />
 <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.*" />
@@ -231,13 +231,13 @@ wincheck process
 <PackageReference Include="Serilog.Sinks.File" Version="5.0.*" />
 ```
 
-### Modern UI Bileşenleri
+### Modern UI Components
 - **WinUI 3 Controls**: NavigationView, InfoBar, TeachingTip
 - **Community Toolkit**: DataGrid, TokenizingTextBox, SettingsCard
 - **Fluent Design System**: Acrylic, Reveal, Shadow effects
-- **Animations**: Composition API ile smooth transitions
+- **Animations**: Smooth transitions with Composition API
 
-## Proje Yapısı
+## Project Structure
 
 ```
 WinCheck/
@@ -276,31 +276,31 @@ WinCheck/
 └── README.md
 ```
 
-## Kurulum ve Geliştirme
+## Installation and Development
 
-### Gereksinimler
-1. Visual Studio 2022 (17.8 veya üzeri)
+### Requirements
+1. Visual Studio 2022 (17.8 or above)
    - Workloads: ".NET Desktop Development", "Windows application development"
-2. Windows SDK 10.0.22621.0 veya üzeri
+2. Windows SDK 10.0.22621.0 or above
 3. .NET 8.0 SDK
 
-### Proje Oluşturma
+### Project Creation
 ```bash
-# WinUI 3 şablonunu yükle
+# Install WinUI 3 template
 dotnet new install Microsoft.WindowsAppSDK.Templates
 
-# Proje oluştur
+# Create project
 dotnet new winui -n WinCheck.App -o src/WinCheck.App
 
-# Class library'ler oluştur
+# Create class libraries
 dotnet new classlib -n WinCheck.Core -o src/WinCheck.Core -f net8.0-windows10.0.22621.0
 dotnet new classlib -n WinCheck.Infrastructure -o src/WinCheck.Infrastructure -f net8.0-windows10.0.22621.0
 
-# Test projesi
+# Test project
 dotnet new mstest -n WinCheck.Tests -o src/WinCheck.Tests
 ```
 
-### Build ve Run
+### Build and Run
 ```bash
 cd src/WinCheck.App
 dotnet restore
@@ -308,29 +308,29 @@ dotnet build -c Release
 dotnet run
 ```
 
-## Güvenlik ve İzinler
+## Security and Permissions
 
-### Gerekli Yetkiler
-- **Administrator Privileges**: Registry ve sistem dosyaları için
+### Required Permissions
+- **Administrator Privileges**: For Registry and system files
 - **Restricted Capabilities**:
   ```xml
   <Capability Name="runFullTrust" />
   <rescap:Capability Name="confirmAppClose" />
   ```
 
-### Güvenlik Önlemleri
-- Tüm sistem değişiklikleri öncesi otomatik yedekleme
-- User Account Control (UAC) entegrasyonu
-- İşlem öncesi onay mekanizması
+### Security Measures
+- Automatic backup before all system changes
+- User Account Control (UAC) integration
+- Pre-operation approval mechanism
 - Rollback capability
 
-## Performans Optimizasyonları
+## Performance Optimizations
 
-1. **Asenkron I/O**: Tüm disk işlemleri async
-2. **Parallel Processing**: PLINQ ile çoklu dosya analizi
-3. **Memory Management**: Span<T>, Memory<T> kullanımı
-4. **Lazy Loading**: UI bileşenlerinde deferred loading
-5. **Caching**: Sık kullanılan sistem bilgileri cache'lenir
+1. **Asynchronous I/O**: All disk operations are async
+2. **Parallel Processing**: Multi-file analysis with PLINQ
+3. **Memory Management**: Use of Span<T>, Memory<T>
+4. **Lazy Loading**: Deferred loading in UI components
+5. **Caching**: Frequently used system information is cached
 
 ## Testing & Quality Assurance
 
@@ -381,12 +381,12 @@ The following critical infrastructure components have comprehensive test coverag
 
 **Test Project Location**: `tests/WinCheck.Tests/`
 
-## Lokalizasyon
-- **ResX** dosyaları ile çoklu dil desteği
-- Desteklenen diller: TR, EN, DE, FR, ES
-- RTL (Right-to-Left) dil desteği
+## Localization
+- Multi-language support with **ResX** files
+- Supported languages: TR, EN, DE, FR, ES
+- RTL (Right-to-Left) language support
 
-## Dağıtım
+## Deployment
 
 ### MSIX Packaging
 ```xml
@@ -397,23 +397,23 @@ The following critical infrastructure components have comprehensive test coverag
 </PropertyGroup>
 ```
 
-### Dağıtım Kanalları
-1. **Microsoft Store** (önerilen)
+### Deployment Channels
+1. **Microsoft Store** (recommended)
 2. **GitHub Releases** (sideload)
 3. **Enterprise Deployment** (Intune, SCCM)
 
-## Lisans
+## License
 MIT License
 
-## Katkıda Bulunma
+## Contributing
 Contributions are welcome! Please read CONTRIBUTING.md
 
-## Yol Haritası
+## Roadmap
 
 ### v1.0 (Q1 2025)
-- ✓ Temel disk temizleme
-- ✓ Registry optimizasyonu
-- ✓ Başlangıç yönetimi
+- ✓ Basic disk cleanup
+- ✓ Registry optimization
+- ✓ Startup management
 
 ### v1.5 (Q2 2025)
 - Scheduled tasks
@@ -425,7 +425,7 @@ Contributions are welcome! Please read CONTRIBUTING.md
 - Network performance optimization
 - Multi-PC management (Enterprise)
 
-## İletişim ve Destek
+## Contact and Support
 - GitHub Issues: [project-url]/issues
 - Email: support@wincheck.app
 - Documentation: https://docs.wincheck.app
